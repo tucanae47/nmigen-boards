@@ -75,6 +75,11 @@ class OrangeCrabR0_2Platform(LatticeECP5Platform):
             attrs=Attrs(IO_TYPE="LVCMOS33", SLEWRATE="FAST")
         ),
 
+        UARTResource(0,
+            rx="N17", tx="M18",
+            attrs=Attrs(IOSTANDARD="LVCMOS33")
+        ),
+
         DirectUSBResource(0, d_p="N1", d_n="M2", pullup="N2", attrs=Attrs(IO_TYPE="LVCMOS33"))
     ]
     connectors = [
